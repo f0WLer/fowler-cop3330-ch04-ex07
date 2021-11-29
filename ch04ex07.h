@@ -12,8 +12,9 @@ namespace ch04ex07
 {
     class Scanner
     {
-        public: static int GetInt();
-        public: static char GetChar();
+    public:
+        static int GetInt();
+        static char GetChar();
     };
     double DoArithmetic(double x, char op, double y);
     static void PrintDouble(double d);

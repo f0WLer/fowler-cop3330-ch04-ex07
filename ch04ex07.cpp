@@ -4,7 +4,8 @@
 using namespace std;
 using namespace ch04ex07;
 
-int main() {
+int main()
+{
     //  Input.
     int x = Scanner::GetInt();
     char op = Scanner::GetChar();
@@ -18,7 +19,8 @@ int main() {
 }
 
 
-int ch04ex07::Scanner::GetInt() {
+int ch04ex07::Scanner::GetInt()
+{
     //  Input.
     string s;
     cin >> s;
@@ -47,31 +49,27 @@ int ch04ex07::Scanner::GetInt() {
     return -1;
 }
 
-char ch04ex07::Scanner::GetChar() {
+char ch04ex07::Scanner::GetChar()
+{
     char c;
     cin >> c;
     return c;
 }
 
-double ch04ex07::DoArithmetic(double x, char op, double y) {
-    double result = 0.0;
-    switch (op) {
-        case '*':
-            result = x * y;
-            break;
-        case '/':
-            result = x / y;
-            break;
-        case '+':
-            result = x + y;
-            break;
-        case '-':
-            result = x - y;
-            break;
-    }
-    return result;
+double ch04ex07::DoArithmetic(double x, char op, double y)
+{
+    if (op == '*')
+        return x * y;
+    if (op == '/')
+        return x / y;
+    if (op == '+')
+        return x + y;
+    if (op == '-')
+        return x - y;
+    return 0.0;
 }
 
-void ch04ex07::PrintDouble(double d) {
+void ch04ex07::PrintDouble(double d)
+{
     cout << d << endl;
 }
